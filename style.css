@@ -1,0 +1,42 @@
+body {
+    min-height: 100vh;
+    margin: 0;
+    overflow: hidden;
+    background-color: #e6e6e6;
+}
+
+.song-info {
+    position: absolute;
+    height: min-content;
+    right: 20px;
+    top: 20px;    
+    padding-block: 5vh;
+    border: 5px solid #ffffff;
+    border-radius: 45px;
+    background:  #e6e6e6;
+    box-shadow:  5px 5px 10px #bebebe,
+                -5px -5px 10px #ffffff,
+                inset 5px 5px 10px #bebebe,
+                inset -5px -5px 10px #ffffff;
+}
+.song-info > * {
+    margin-top: 1vh;
+    font-size: 18px;
+    text-align: center;
+}
+.song-info > *:nth-child(1)  {
+    font-size: 24px;
+}
+
+.song-info a {
+    display: block;
+}
+.song-info img {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+#audio-graph {
+    position: absolute;
+    right: 0;
+}
