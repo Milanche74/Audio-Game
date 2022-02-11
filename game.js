@@ -14,7 +14,7 @@ const muffledSound = new BiquadFilterNode(context, {
     frequency: 1000,
     gain: 0
 })
-const analyzer = new AnalyserNode(context, {fftSize: 512})
+const analyzer = new AnalyserNode(context, {fftSize: 1024})
 
 let verseReady = false;
 let bridgeReady = false;
@@ -439,7 +439,7 @@ const drawAudioGraph = () => {
         const y = item / 255 * height / 1.5
         const x = barWidth * index
 
-        canvasContext.fillStyle = `hsl(${184 - index * 1.6}, 100%, 50%)`
+        canvasContext.fillStyle = `hsl(${184 - index * 0.725}, 100%, 50%)`
         canvasContext.fillRect(x, height - y, barWidth, y)
     })
 
