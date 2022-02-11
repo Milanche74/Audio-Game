@@ -8,15 +8,15 @@ Use arrow keys to move a player and collect instrument items to play a certain i
 
 Backend was developed using this packages: 
 
-- express
-- cors
-- axios
-- dotenv
-- nodemon
+- express (sets up backend functionality)
+- cors (allows cross origin resource sharing?)
+- axios (handles request sent to RAPID API HUB)
+- dotenv (processes API key so it can be hidden)
+- nodemon (listen to changes on server)
 
 Node v14.17.3
 
 ## Initialization
 
-Backend is run using: npm run start:backend
-Frontend is run using VS code live server
+- Backend is run using: npm run start:backend
+- Frontend is run using VS code live server

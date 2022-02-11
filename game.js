@@ -6,7 +6,7 @@
 const context = new AudioContext() 
     
 
-const masterGain = new GainNode(context, {gain: 0.1})
+const masterGain = new GainNode(context, {gain: 0.3})
 const bassGain = new GainNode(context, {gain: 0})
 const otherGain = new GainNode(context, {gain: 0})
 const muffledSound = new BiquadFilterNode(context, {
@@ -34,7 +34,7 @@ const refrain = document.querySelector('.refrain')
 
 
 
-const bassTrack = context.createMediaElementSource(bass)
+const bassTrack = context.createMediaElementSource(bass) 
 const bridgeTrack = context.createMediaElementSource(bridge)
 const drumsTrack = context.createMediaElementSource(drums)
 const otherTrack = context.createMediaElementSource(other)
@@ -45,7 +45,7 @@ const refrainTrack = context.createMediaElementSource(refrain)
 bassTrack.connect(bassGain).connect(muffledSound).connect(masterGain).connect(analyzer).connect(context.destination)
 bridgeTrack.connect(muffledSound).connect(masterGain).connect(analyzer).connect(context.destination)
 drumsTrack.connect(muffledSound).connect(masterGain).connect(analyzer).connect(context.destination)
-otherTrack.connect(otherGain).connect(muffledSound).connect(analyzer).connect(masterGain).connect(context.destination)
+otherTrack.connect(otherGain).connect(muffledSound).connect(masterGain).connect(analyzer).connect(context.destination)
 verse1Track.connect(muffledSound).connect(masterGain).connect(analyzer).connect(context.destination)
 verse2Track.connect(muffledSound).connect(masterGain).connect(analyzer).connect(context.destination)
 refrainTrack.connect(muffledSound).connect(masterGain).connect(analyzer).connect(context.destination)
