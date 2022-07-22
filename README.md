@@ -6,6 +6,8 @@ Use arrow keys to move a player and collect instrument items to play a certain i
 
 ## Dependencies
 
+Run `npm install` to install all the dependencies.
+
 Backend was developed using this packages: 
 
 - express (sets up backend functionality)
